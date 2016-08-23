@@ -5,7 +5,11 @@
 </head>
 <body>
 	<div>
-		<h1><a href="">Django Juanin Blog</a></h1>
+		{% for post in posts%}
+		<p>published:	{{ post.published_date }} </p>
+		<h1><a href="">{{post.titulo}}</a></h1>
+		<p>{{post.texto|linebreaksbr }}</p>			
+		{% endfor %}
 	</div>
 	<div>
 			<p>Publicado 14.08.2016, 20:28</p>
